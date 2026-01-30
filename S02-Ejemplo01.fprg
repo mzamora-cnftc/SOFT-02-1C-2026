@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="S02-Ejemplo01"/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-01-27 08:11:37 p.&#8239;m."/>
+        <attribute name="created" value="YWRtaW47QkxVRVBDOzIwMjYtMDEtMjc7MDc6NTI6NTEgcC7igK9tLjsxMDY0Mw=="/>
+        <attribute name="edited" value="YWRtaW47QkxVRVBDOzIwMjYtMDEtMjc7MDg6MTE6MzcgcC7igK9tLjsxOzEwNzUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="votosValidos, cantidadDiputaciones, votosPartido, cantidadDiputados, cifraResidual" type="Integer" array="False" size=""/>
+            <declare name="cociente, subCociente" type="Real" array="False" size=""/>
+            <comment text="Input"/>
+            <output expression="&quot;Digite la cantidad de votos v&#225;lidos&quot;" newline="True"/>
+            <input variable="votosValidos"/>
+            <output expression="&quot;Digite la cantidad de diputaciones&quot;" newline="True"/>
+            <input variable="cantidadDiputaciones"/>
+            <output expression="&quot;Digite la cantidad de votos: &quot;" newline="True"/>
+            <input variable="votosPartido"/>
+            <comment text="Process"/>
+            <assign variable="cociente" expression="votosValidos / cantidadDiputaciones"/>
+            <assign variable="subCociente" expression="cociente / 2"/>
+            <assign variable="cantidadDiputados" expression="votosPartido / cociente"/>
+            <assign variable="cifraResidual" expression="votosPartido % cociente"/>
+            <comment text="output"/>
+            <output expression="&quot;Diputados: &quot; &amp; cantidadDiputados" newline="True"/>
+            <output expression="&quot;Residuo: &quot; &amp; cifraResidual" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

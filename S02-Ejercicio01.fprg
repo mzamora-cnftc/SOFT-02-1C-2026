@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="S02-Ejercicio01"/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-01-29 07:07:05 p.&#8239;m."/>
+        <attribute name="created" value="YWRtaW47QkxVRVBDOzIwMjYtMDEtMjk7MDY6NTg6NTggcC7igK9tLjsxMDY1Nw=="/>
+        <attribute name="edited" value="YWRtaW47QkxVRVBDOzIwMjYtMDEtMjk7MDc6MDc6MDUgcC7igK9tLjsxOzEwNzUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="salarioBruto, salarioNeto, caja, pension, asociacion" type="Real" array="False" size=""/>
+            <declare name="nombre" type="String" array="False" size=""/>
+            <comment text="Input"/>
+            <output expression="&quot;Digite su nombre: &quot;" newline="True"/>
+            <input variable="nombre"/>
+            <output expression="&quot;Digite su salario sin deducciones: &quot;" newline="True"/>
+            <input variable="salarioBruto"/>
+            <comment text="Process&#13;&#10;"/>
+            <assign variable="caja" expression="salarioBruto * (9.75 / 100)"/>
+            <assign variable="pension" expression="salarioBruto * 0.0925"/>
+            <assign variable="asociacion" expression="salarioBruto * (13.8 / 100)"/>
+            <assign variable="salarioNeto" expression="salarioBruto - (caja+asociacion+pension)"/>
+            <comment text="output"/>
+            <output expression="&quot;Caja&quot; &amp; caja" newline="True"/>
+            <output expression="salarioBruto" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
